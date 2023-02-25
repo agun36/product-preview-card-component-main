@@ -38,7 +38,7 @@ html, body {
 */
 body {
   line-height: 1.5;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   -webkit-font-smoothing: antialiased;
   color:var(--clr-Neutral-Dark-grayish-blue) ;
   font-size: 0.875rem;
