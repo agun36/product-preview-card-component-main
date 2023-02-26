@@ -30,6 +30,17 @@
 * {
   margin: 0;
 }
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /*
   3. Allow percentage-based heights in the application
 */
@@ -46,14 +57,14 @@ body {
   line-height: 1.2;
   padding: 1.5rem;
   -webkit-font-smoothing: antialiased;
-  color:var(--clr-Neutral-Dark-grayish-blue) ;
+  color:var(--clr-Neutral-Dark-grayish-blue);
   font-family: var(--ff-base);
   font-weight: var(--fw-regular);
   font-size: 0.875rem;
   background-color: var(--clr-Primary-Cream);
   display: grid;
 place-content: center;
-  margin: 2rem;
+text-rendering: optimizeSpeed;
 }
 /*
   6. Improve media defaults
@@ -80,9 +91,7 @@ h1,h2,h3{
 /*
   9. Create a root stacking context
 */
-main{
- min-height: 100%;
-}
+
 .flex-group{
  display: flex;
  gap: 1rem;
@@ -96,9 +105,10 @@ background-color: var(--clr-Neutral-White);
 border-radius: .5rem;
 overflow: hidden;
 display: grid;
+grid-template-columns: 1fr;
 max-width: 650px;
 }
-@media (min-width:700px) {
+@media (min-width:650px) {
  .product{
   --content-padding:1.5rem;
   grid-template-columns: 1fr 1fr;
