@@ -113,6 +113,7 @@ max-width: 650px;
   --content-padding:1.5rem;
   grid-template-columns: 1fr 1fr;
   border-radius: .5rem;
+  grid-template-rows: 1fr;
  }
 }
 .product-content{
